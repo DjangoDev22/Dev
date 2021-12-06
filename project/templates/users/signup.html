@@ -1,0 +1,55 @@
+{% extends 'base_1.html' %}
+{% load static %}
+<title>
+  {% block title %}
+      User Signup
+  {% endblock %}
+</title>
+
+
+{% block content %}
+<section class="signup">
+    <div class="imgBox">
+        <img src="{% static 'img/register-2.jpg' %}" alt="Signin">
+    </div>
+    <div class="contentBox">
+        <div class="formBox">
+            <h2>Sign Up</h2>
+            <form action="" method="POST">
+                {% csrf_token %}
+                <div class="inputBox">
+                    {{form.username}}
+                    <!-- <input class="username" type="text" placeholder="@john_doe"> -->
+                </div>
+                <div class="inputBox">
+                    {{form.email}}
+                    <!-- <input class="username" type="text" placeholder="@john_doe"> -->
+                </div>
+                <div class="inputBox">
+                    {{form.first_name}}
+                    <!-- <input class="email" type="email" placeholder="johndoe@gmail.com"> -->
+                </div>
+                <div class="inputBox">
+                    {{form.last_name}}
+                    <!-- <input class="email" type="email" placeholder="johndoe@gmail.com"> -->
+                </div>
+                <div class="inputBox">
+                    {{form.password}}
+                    <!-- <input class="password1" type="text" placeholder="password"> -->
+                </div>
+                <div class="inputBox">
+                    {{form.password_confirmation}}
+                    <!-- <input class="password2" type="text" placeholder="password confirmation"> -->
+                </div>
+                <div class="inputBox">
+                    <button type="submit">Sign Up</button>
+                </div>
+            </form>
+            <div class="other">
+                <span>Already have an account?</span>
+                <a href="{% url 'user_login' %}">Sign in</a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

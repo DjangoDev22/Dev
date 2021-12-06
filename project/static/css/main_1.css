@@ -1,0 +1,722 @@
+/*                 Start Contact Us Section CSS Rules                         */
+.contact-us{
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    background-color: #fff!important;
+    display: flex;
+}
+
+.contact-us .imgBox{
+    position: relative;
+    width: 50%;
+    height: 100%;
+}
+
+.contact-us .imgBox img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.contact-us .contentBox{
+    position: relative;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-us .contentBox .formBox{
+    width: 50%;
+}
+
+.contact-us .contentBox .formBox h2{
+    display: inline-block;
+    font-size: 20px;
+    font-family: 'Kanit', sans-serif;
+    font-weight: 700;
+    color: #607d86;
+    margin-bottom: 20px;
+    border-bottom: 3px solid #ff4584;
+}
+
+.contact-us .contentBox .formBox .inputBox{
+    margin-bottom: 20px;
+}
+
+.contact-us .contentBox .formBox .inputBox .email{
+    position: relative;
+    outline: none;
+    border: none;
+    border: 1px solid #607d86;
+    border-radius: 50px;
+    padding: 10px 20px;
+    width: 100%;
+    background-color: transparent;
+    font-size: 18px;
+    font-family: 'Kanit', sans-serif;
+    font-weight: 400;
+    color: #607d86;
+}
+
+.contact-us .contentBox .formBox .inputBox .message{
+    position: relative;
+    border: 1px solid #607d86;
+    border-radius: 10px;
+    outline: none;
+    max-width: 100%;
+    padding: 20px;
+    background-color: transparent;
+    font-size: 18px;
+    font-family: 'Kanit', sans-serif;
+    font-weight: 500;
+    color: #607d86;
+}
+
+.contact-us .contentBox .formBox .inputBox button{
+    outline: none;
+    border: none;
+    color: #fff;
+    background-color: #ff4584;
+    border: 1px solid #ff4584;
+    border-radius: 50px;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    text-align: center;
+    width: 100%;
+}
+
+.contact-us .contentBox .formBox .inputBox button:hover{
+    background-color: #f53677;
+}
+/*                 End Contact Us Section CSS Rules                           */
+
+/*                 Start Signup Section CSS Rules                           */
+.signup{
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    background-color: #fff!important;
+    display: flex;
+}
+
+.signup .imgBox{
+    position: relative;
+    width: 50%;
+    height: 100%;
+}
+
+.signup .imgBox img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.signup .contentBox{
+    position: relative;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.signup .contentBox .formBox{
+    width: 50%;
+}
+
+.signup .contentBox .formBox h2{
+    display: inline-block;
+    font-size: 20px;
+    font-family: 'Kanit', sans-serif;
+    font-weight: 700;
+    color: #607d86;
+    margin-bottom: 20px;
+    border-bottom: 3px solid #ff4584;
+}
+
+.signup .contentBox .formBox .inputBox{
+    margin-bottom: 20px;
+}
+
+.signup .contentBox .formBox .inputBox .username,
+.signup .contentBox .formBox .inputBox .email,
+.signup .contentBox .formBox .inputBox .password1,
+.signup .contentBox .formBox .inputBox .password2
+{
+    position: relative;
+    outline: none;
+    border: none;
+    border: 1px solid #607d86;
+    border-radius: 50px;
+    padding: 10px 20px;
+    width: 100%;
+    background-color: transparent;
+}
+
+.signup .contentBox .formBox .inputBox button{
+    outline: none;
+    border: none;
+    color: #fff;
+    background-color: #ff4584;
+    border: 1px solid #ff4584;
+    border-radius: 50px;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    text-align: center;
+    width: 100%;
+}
+
+.signup .contentBox .formBox .inputBox button:hover{
+    background-color: #f53677;
+}
+
+.signup .contentBox .formBox .other span{
+    color: #607d86;
+    font-size: 16px;
+    font-family: 'Kanit', sans-serif;
+    font-weight: 500;
+}
+
+.signup .contentBox .formBox .other a{
+    display: inline-block;
+    text-decoration: none;
+    color: #ff4584;
+    font-size: 14px;
+    font-family: 'Kanit', sans-serif;
+    font-weight: 500;
+}
+/*                 End Signup Section CSS Rules                             */
+
+/*                 Start Login Section CSS Rules                             */
+.signin{
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    background-color: #fff!important;
+    display: flex;
+}
+
+.signin .imgBox{
+    position: relative;
+    width: 50%;
+    height: 100%;
+}
+
+.signin .imgBox img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.signin .contentBox{
+    position: relative;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.signin .contentBox .formBox{
+    width: 50%;
+}
+
+.signin .contentBox .formBox h2{
+    display: inline-block;
+    font-size: 20px;
+    font-family: 'Kanit', sans-serif;
+    font-weight: 700;
+    color: #607d86;
+    margin-bottom: 20px;
+    border-bottom: 3px solid #ff4584;
+}
+
+.signin .contentBox .formBox .inputBox{
+    margin-bottom: 20px;
+}
+
+.signin .contentBox .formBox .inputBox .email,
+.signin .contentBox .formBox .inputBox .password
+{
+    position: relative;
+    outline: none;
+    border: none;
+    border: 1px solid #607d86;
+    border-radius: 50px;
+    padding: 10px 20px;
+    width: 100%;
+    background-color: transparent;
+}
+
+.signin .contentBox .formBox .inputBox button{
+    outline: none;
+    border: none;
+    color: #fff;
+    background-color: #ff4584;
+    border: 1px solid #ff4584;
+    border-radius: 50px;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    text-align: center;
+    width: 100%;
+}
+
+.signin .contentBox .formBox .inputBox button:hover{
+    background-color: #f53677;
+}
+
+.signin .contentBox .formBox .other span{
+    color: #607d86;
+    font-size: 16px;
+    font-family: 'Kanit', sans-serif;
+    font-weight: 500;
+}
+
+.signin .contentBox .formBox .other a{
+    display: inline-block;
+    text-decoration: none;
+    color: #ff4584;
+    font-size: 14px;
+    font-family: 'Kanit', sans-serif;
+    font-weight: 500;
+}
+
+.signin .contentBox .formBox .social-login{
+    margin-top: 50px;
+    text-align: center;
+}
+
+.signin .contentBox .formBox .social-login h3{
+    position: relative;
+    color: #607d86;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    padding: 8px 8px;
+}
+
+.signin .contentBox .formBox .social-login a{
+    display: inline-block;
+    text-decoration: none;
+    border-radius: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.signin .contentBox .formBox .social-login a .icon{
+    display: inline-block;
+    background-color: #607d86;
+    margin: 0 10px;
+    border-radius: 100%;
+    color: #fff;
+}
+
+.signin .contentBox .formBox .social-login a .icon:hover{
+    background-color: #ff4584;
+}
+
+.signin .contentBox .formBox .social-login a .icon.face{
+    padding: 10px 15px;
+}
+
+.signin .contentBox .formBox .social-login a .icon.git{
+    padding: 10px;
+}
+
+.signin .contentBox .formBox .social-login a .icon.plus{
+    padding: 10px;
+}
+/*                 End Login Section CSS Rules                               */
+
+/*                 Start Add & Edit Profile Section CSS Rules                               */
+.add-profile{
+    position: relative;
+    background-color: #fff!important;
+    width: 100%;
+}
+
+.add-profile .contentBox{
+    position: relative;
+    width: 50%;
+    margin: 0 auto;
+    padding: 50px;
+}
+
+.add-profile .contentBox h2{
+    display: inline-block;
+    font-size: 24px;
+    font-family: 'Kanit', sans-serif;
+    font-weight: 600;
+    color: #607d86;
+    margin-bottom: 20px;
+}
+
+.add-profile .contentBox h2 i{
+    display: inline-block;
+    margin-right: 15px;
+}
+
+.add-profile .contentBox .imgBox{
+    position: relative;
+    width: 120px;
+    height: 100px;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: 30%;
+}
+
+.add-profile .contentBox .imgBox img{
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+    object-fit: cover;
+}
+
+.add-profile .contentBox .formBox{
+    position: relative;
+    display: flex;
+}
+
+.add-profile .contentBox .formBox .fileBox input{
+    display: none;
+}
+
+.add-profile .contentBox .formBox .fileBox label{
+    position: relative;
+    display: inline-block;
+    top: -35px;
+    right: -47%;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+}
+
+.add-profile .contentBox .formBox .fileBox .img-icon{
+    color: #fff;
+    background-color: #0077b6;
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    border-radius: 100%;
+    padding: 10px;
+    transform: scale(0.5);
+    cursor: pointer;
+}
+
+.add-profile .contentBox .formBox .group-inline{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.add-profile .contentBox .formBox .group-inline .inputBox{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.add-profile .contentBox .formBox .group-inline .inputBox:nth-child(2){
+    margin-left:60px;
+}
+
+.add-profile .contentBox .formBox .group-inline .inputBox label{
+    position: relative;
+    color: #607d86;
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    padding: 8px 8px;
+}
+
+
+.add-profile .contentBox .formBox .group-inline .inputBox .first_name,
+.add-profile .contentBox .formBox .group-inline .inputBox .last_name{
+    position: relative;
+    outline: none;
+    border: none;
+    border: 1px solid #607d86;
+    border-radius: 50px;
+    padding: 10px 20px;
+    width: 100%;
+    background-color: transparent;
+    font-size: 16px;
+    font-family: 'Kanit', sans-serif;
+    font-weight: 300;
+    color: #607d86;
+}
+
+.add-profile .contentBox .formBox .inputBox{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.add-profile .contentBox .formBox .inputBox label{
+    position: relative;
+    color: #607d86;
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    padding: 8px 8px;
+}
+
+.add-profile .contentBox .formBox .inputBox .input-field{
+    position: relative;
+    outline: none;
+    border: none;
+    border: 1px solid #607d86;
+    border-radius: 50px;
+    padding: 10px 20px;
+    width: 100%;
+    background-color: transparent;
+    font-size: 16px;
+    font-family: 'Kanit', sans-serif;
+    font-weight: 300;
+    color: #607d86;
+}
+
+.add-profile .contentBox .formBox .dateBox label{
+    position: relative;
+    color: #607d86;
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    padding: 8px 8px;
+}
+.add-profile .contentBox .formBox .dateBox{
+    display: flex;
+}
+
+.add-profile .contentBox .formBox .dateBox .date{
+    position: relative;
+    outline: none;
+    border: none;
+    border: 1px solid #607d86;
+    border-radius: 50px;
+    padding: 10px 20px;
+    width: 100%;
+    background-color: transparent;
+    font-size: 16px;
+    font-family: 'Kanit', sans-serif;
+    font-weight: 300;
+    color: #607d86;
+}
+
+.add-profile .contentBox .formBox .inputBox .bio{
+    position: relative;
+    border: 1px solid #607d86;
+    border-radius: 10px;
+    outline: none;
+    width: 100%;
+    padding: 20px;
+    background-color: transparent;
+    font-size: 18px;
+    font-family: 'Kanit', sans-serif;
+    font-weight: 500;
+    color: #607d86;
+}
+
+.add-profile .contentBox .formBox .inputBox button{
+    position: relative;
+    outline: none;
+    border: none;
+    color: #fff;
+    background-color: #0077b6;
+    border: 1px solid #0077b6;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    text-align: center;
+    width: 35%;
+}
+
+.add-profile .contentBox .formBox .inputBox button:hover{
+    background-color: #023e8a;
+}
+/*                 End Add & Edit Profile Section CSS Rules                                 */
+
+/*                 Start User Profile Section CSS Rules                                 */
+.user-profile{
+    position: relative;
+}
+
+.user-profile .contentBox{
+    position: relative;
+    width: 50%;
+    margin: 0 auto;
+    padding: 50px;
+}
+
+.user-profile .contentBox h2{
+    display: inline-block;
+    font-size: 24px;
+    font-family: 'Kanit', sans-serif;
+    font-weight: 600;
+    color: #607d86;
+    margin-bottom: 40px;
+}
+
+.user-profile .contentBox h2 i{
+    display: inline-block;
+    margin-right: 15px;
+}
+
+.user-profile .contentBox .imgBox{
+  position: relative;
+  width: 180px;
+  height: 200px;
+  border-radius: 100%;
+  left: 35%;
+  display: flex;
+  flex-direction: column;
+}
+
+.user-profile .contentBox .imgBox img{
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+    object-fit: cover;
+}
+
+.user-profile .contentBox .imgBox h3{
+  display: inline-block;
+  font-size: 20px;
+  font-family: 'Kanit', sans-serif;
+  font-weight: 600;
+  color: #607d86;
+}
+
+.user-profile .contentBox .about{
+    display: inline-block;
+    font-size: 24px;
+    font-family: 'Kanit', sans-serif;
+    font-weight: 600;
+    color: #607d86;
+    margin: 0 20px;
+    padding-top: 20px;
+}
+
+.user-profile .contentBox .about h2{
+    display: inline-block;
+    font-size: 24px;
+    font-family: 'Kanit', sans-serif;
+    font-weight: 600;
+    color: #607d86;
+    margin-bottom: 20px;
+}
+
+.user-profile .contentBox .about .container{
+    display: flex;
+    margin-bottom: 5px;
+    width: 100%;
+}
+
+.user-profile .contentBox .about .container .label{
+    position: relative;
+    color: #333;
+    font-size: 14px;
+    font-family: 'Kanit', sans-serif;
+    font-weight: 500;
+    padding: 8px 8px;
+}
+
+.user-profile .contentBox .about .container .text{
+    position: relative;
+    color: #333;
+    font-size: 16px;
+    font-family: MONOSPACE;
+    font-weight: 500;
+    padding: 5px 0px;
+    letter-spacing: 1px;
+}
+
+.user-profile .contentBox .user-posts{
+    font-size: 24px;
+    font-family: 'Kanit', sans-serif;
+    font-weight: 600;
+    color: #607d86;
+    margin: 20px;
+    padding-top: 20px;
+}
+
+.user-profile .contentBox .user-posts h2{
+    display: inline-block;
+    font-size: 24px;
+    font-family: 'Kanit', sans-serif;
+    font-weight: 600;
+    color: #607d86;
+    margin-bottom: 20px;
+}
+
+.user-profile .contentBox .user-posts .card{
+    width: 100%;
+    background-color: #fff;
+    padding: 2rem 1rem 2rem 2rem;
+    border-radius: 10px;
+    margin: 10px;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3);
+}
+
+.user-profile .contentBox .user-posts .card .date{
+    margin: 0 0 0.5rem 0;
+    color: #999;
+    font-size: 1rem;
+    font-family: 'Roboto', sans-serif;
+}
+
+.user-profile .contentBox .user-posts .card .text .title{
+    margin: 0 0 1rem 0;
+    font-size: 20px;
+    letter-spacing: 0.5px;
+    color: #333;
+    font-family: 'Roboto', sans-serif;
+}
+
+.user-profile .contentBox .user-posts .card .text .body{
+    margin: 0 0 3.5rem 0;
+    font-size: 22px;
+    color: #333;
+    font-family: 'Roboto', sans-serif;
+}
+
+.user-profile .contentBox .user-posts .card .btn{
+    border: none;
+    outline: none;
+    background: linear-gradient(90deg, #ff9966, #ff5e62);
+    padding: 1rem 1rem;
+    border-radius: 50px;
+    color: white;
+    font-size: 18px;
+    box-shadow: 1px 10px 2rem rgba(255, 94, 98, 0.5);
+    transition: all .2s ease-in;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+}
+
+.user-profile .contentBox .user-posts .card .btn:hover{
+    box-shadow: 0px 5px 1rem rgba(255, 94, 98, 0.5);
+}
+/*                 End User Profile Section CSS Rules                                   */

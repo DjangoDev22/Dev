@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+{% load static %}
+{% load humanize %}
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Home Page</title>
+    <!-- Fav Icon Link -->
+    <link rel="shortcut icon" type="image/png" href="{% static 'img/blogger.ico' %}"/>
+    <!-- normalize.css Library -->
+    <link rel="stylesheet" href="{% static 'css/normalize.css' %}">
+    <!-- Custom styles css -->
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    <!-- Responsive styles css -->
+    <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
+    <!-- Font Awesome Icons -->
+    <script src="https://kit.fontawesome.com/6a630c222c.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <header>
+      <div class="logo">
+          <a href="{% url 'home' %}"><p>dev</p></a>
+      </div>
+      <ul class="nav_links">
+          {% if user.is_authenticated %}
+              <li><a href="{% url 'home' %}">Home</a></li>
+              <li><a href="{% url 'posts:add_post' %}">Add Post</a></li>
+              <li><a href="{% url 'posts:add_category' %}">Add Category</a></li>
+              <li><a href="{% url 'posts:add_tag' %}">Add Tag</a></li>
+              <li>
+                  <span>
+                      <i class="far fa-user"></i> {{ user.username }} <i class="fas fa-angle-down icon"></i>
+                  </span>
+                  <ul class="menu hide">
+                      <li><a href="{% url 'user_profile' user.pk %}">Profile</a></li>
+                      <li><a href="{% url 'logout' %}">Logout</a></li>
+                  </ul>
+              </li>
+          {% else %}
+            <li><a href="{% url 'user_login' %}">Login</a></li>
+            <li><a href="{% url 'user_signup' %}">Signup</a></li>
+          {% endif %}
+      </ul>
+  </header>
+
+<!-- Hero Image Start -->
+<section class="hero">
+    <!-- <img src="{% static 'img/hero-img.jpg' %}" alt="Hero Image"> -->
+    <div class="info">
+        <div class="text">
+            <h3 class="l-one">web zone</h3>
+            <h3 class="l-two">the adventure begins</h3>
+            <h3 class="l-three">learn better, faster and together</h3>
+        </div>
+        <div class="register">
+          {% if user.is_authenticated %}
+            <a href="{% url 'posts:post_listings' %}">Discover</a>
+            <!-- <a href="{% url 'posts:add_post' %}">Create Post</a> -->
+          {% else %}
+            <a href="{% url 'user_signup' %}">Signup</a>
+            <a href="{% url 'user_login' %}">Signin</a>
+          {% endif %}
+        </div>
+    </div>
+</section>
+<!-- Hero Image  End-->
+
+<!-- Latest Posts Start -->
+{% if latest_posts %}
+<section class="trending-posts">
+  <h3 class="heading">Latest Posts</h3>
+
+    <!-- <span class="icon-prev fas fa-angle-left"></span> -->
+    <!-- <span class="icon-next fas fa-angle-right"></span> -->
+
+    <div class="content">
+      {% for latest_post in latest_posts %}
+      <div class="card">
+          <div class="text">
+              <h3 class="date">{{ latest_post.created_at |naturaltime }}</h3>
+              <h1 class="title">{{ latest_post.title }}</h1>
+              <p class="body">
+              {{ latest_post.content |slice:":120" }}
+              </p>
+          </div>
+          <a href="{% url 'posts:post_detail' latest_post.slug %}" class="btn">Read More</a>
+      </div>
+      {% endfor %}
+    </div>
+    <div class="load-more">
+        <a href="{% url 'latest_posts' %}" class="btn">Load More</a>
+    </div>
+</section>
+{% endif %}
+<!-- Latest Posts End -->
+
+<!-- Trending Posts Start -->
+{% if trending_posts %}
+<section class="trending-posts">
+    <h3 class="heading">Trending Posts</h3>
+    <div class="content">
+        {% for trending_post in trending_posts %}
+        <div class="card">
+            <div class="text">
+                <h3 class="date">{{ trending_post.created_at |naturaltime }}</h3>
+                <h1 class="title">{{ trending_post.title }}</h1>
+                <p class="body">
+                {{ trending_post.content |slice:":120" }}
+                </p>
+            </div>
+            <a href="{% url 'posts:post_detail' trending_post.slug %}" class="btn">Read More</a>
+        </div>
+        {% endfor %}
+    </div>
+    <div class="load-more">
+        <a href="{% url 'trending_posts' %}" class="btn">Load More</a>
+    </div>
+</section>
+{% endif %}
+<!-- Latest Posts End -->
+
+<footer>
+    <div class="follow-us">
+        <h2>Follow Us</h2>
+        <div class="social">
+            <a href="#"><span class="icon fab fa-facebook-f"></span></a>
+            <a href="#"><span class="icon fab fa-twitter"></span></a>
+            <a href="#"><span class="icon fab fa-instagram"></span></a>
+            <a href="#"><span class="icon fab fa-linkedin-in"></span></a>
+            <a href="#"><span class="icon fab fa-pinterest-p"></span></a>
+        </div>
+        <div class="links">
+            <a href="#">About Us</a>
+            <a href="#">Contact Us</a>
+        </div>
+    </div>
+
+    <div class="more-links">
+        <h2>Find Out</h2>
+        <div class="links">
+            <a href="#">Categories</a>
+            <a href="#">Tags</a>
+            <a href="#">Popular Posts</a>
+        </div>
+    </div>
+
+    <div class="newsletter">
+        <h2>Never Miss A Post</h2>
+        <div class="form">
+            <form method="POST">
+                {% csrf_token %}
+                {{ sub_form.email }}
+                <!-- <input class="subscribe" type="text" placeholder="Enter Your Email Address"> -->
+                <button class="btn" type="submit">Follow</button>
+            </form>
+        </div>
+        <div class="more">
+            <h2>Why We Have This Blog</h2>
+            <p>We Create This Blog To Help People Understand The Programming And Be Concistent With The New Concepts</p>
+        </div>
+    </div>
+</footer>
+
+    <script src="{% static 'js/custom.js' %}"></script>
+</body>
+</html>

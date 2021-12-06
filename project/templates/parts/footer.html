@@ -1,0 +1,41 @@
+<footer>
+    <div class="follow-us">
+        <h2>Follow Us</h2>
+        <div class="social">
+            <a href="#"><span class="icon fab fa-facebook-f"></span></a>
+            <a href="#"><span class="icon fab fa-twitter"></span></a>
+            <a href="#"><span class="icon fab fa-instagram"></span></a>
+            <a href="#"><span class="icon fab fa-linkedin-in"></span></a>
+            <a href="#"><span class="icon fab fa-pinterest-p"></span></a>
+        </div>
+        <div class="links">
+            <a href="#">About Us</a>
+            <a href="#">Contact Us</a>
+        </div>
+    </div>
+
+    <div class="more-links">
+        <h2>Find Out</h2>
+        <div class="links">
+            <a href="#">Categories</a>
+            <a href="#">Tags</a>
+            <a href="#">Popular Posts</a>
+        </div>
+    </div>
+
+    <div class="newsletter">
+        <h2>Never Miss A Post</h2>
+        <div class="form">
+            <form method="POST">
+                {% csrf_token %}
+                {{ sub_form.email }}
+                <!-- <input class="subscribe" type="text" placeholder="Enter Your Email Address"> -->
+                <button class="btn" type="submit">Follow</button>
+            </form>
+        </div>
+        <div class="more">
+            <h2>Why We Have This Blog</h2>
+            <p>We Create This Blog To Help People Understand The Programming And Be Concistent With The New Concepts</p>
+        </div>
+    </div>
+</footer>

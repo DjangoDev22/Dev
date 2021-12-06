@@ -1,0 +1,36 @@
+{% extends 'base_1.html' %}
+{% load static %}
+<title>
+  {% block title %}
+      Newsletter Messages
+  {% endblock %}
+</title>
+
+
+
+{% block content %}
+<section class="contact-us">
+    <div class="imgBox">
+        <img src="{% static 'img/contact-2.jpg' %}" alt="Signin">
+    </div>
+    <div class="contentBox">
+        <div class="formBox">
+            <h2>Send Messages To Subscribers</h2>
+            <form method="POST">
+                {% csrf_token %}
+                <div class="inputBox">
+                    {{ form.title }}
+                    <!-- <input class="email" type="email" placeholder="johndoe@gmail.com"> -->
+                </div>
+                <div class="inputBox">
+                    {{ form.message }}
+                    <!-- <textarea class="message" cols="30" rows="10" placeholder="Enter Your Message Here ..."></textarea> -->
+                </div>
+                <div class="inputBox">
+                    <button type="submit">Message</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+{% endblock %}

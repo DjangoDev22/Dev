@@ -1,0 +1,157 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load humanize %}
+{% load social_share %}
+<title>
+  {% block title %}
+      Post Detail
+  {% endblock %}
+</title>
+
+
+{% block content %}
+<main class="post-details">
+    <section class="left">
+        <section class="detail">
+            <div class="post-title">
+                <p class="title">{{ article.title }}</p>
+            </div>
+            <div class="posted-at">
+                <p class="date">Posted On {{ article.created_at |naturalday }} <a href="{% url 'user_profile' article.author.pk %}" class="user"><span>By {{ article.author.username }}</span></a></p>
+            </div>
+            <div class="category">
+                <a href="{% url 'posts:category' article.category.slug %}">{{ article.category }}</a>
+            </div>
+            <div class="tags">
+                {% for tag in article.tags.all %}
+                <a href="{% url 'posts:tags' tag.slug %}">{{ tag.tag_name }}</a>
+                {% endfor %}
+            </div>
+            {% if article.image %}
+            <picture class="img">
+                <img src="{{ article.image.url }}" alt="Post Image">
+            </picture>
+            {% endif %}
+            <div class="post-body">
+                <p class="body">
+                    {{ article.content }}
+                </p>
+            </div>
+        </section>
+
+        <section class="comments">
+            <div class="content">
+                <div class="comment-form">
+                    <form action="{% url 'posts:post_detail' article.slug %}" method="POST">
+                        {% csrf_token %}
+                        {{ form }}
+                        <button class="btn" type="submit">Comment</button>
+                    </form>
+                </div>
+                <div class="comment-replies">
+                    {% if comments %}
+                        {% for comment in comments %}
+                        <div class="content">
+                            <div class="commentator">
+                                <div class="img">
+                                    {% if comment.user.profile.avatar %}
+                                    <img src="{{ comment.user.profile.avatar.url }}" alt="Commentator">
+                                    {% else %}
+                                    <img src="{% static 'img/add-profile.jfif' %}" alt="Commentator">
+                                    {% endif %}
+                                </div>
+                                {% if comment.user.username %}
+                                <a href="{% url 'user_profile' comment.user.pk %}">{{comment.user.username}}</a>
+                                {% else %}
+                                <a href="{% url 'user_profile' comment.user.pk %}">{{comment.user.first_name}} {{comment.user.last_name}}</a>
+                                {% endif %}
+                            </div>
+                            <div class="comment-body">
+                                <p class="body">{{ comment.comment }}</p>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    {% endif %}
+                </div>
+            </div>
+        </section>
+
+        <aside class="more">
+            <div class="contentBox">
+              <form method= "POST" action= "{% url 'posts:like' article.slug %}">
+                  {% csrf_token %}
+                  <button class="btn" type= "submit"><span class="icon fas fa-heart"></span></button>
+              </form>
+                <span class="text">{{ article.likes.count }}</span>
+            </div>
+            <div class="contentBox">
+                <form method= "POST" action= "{% url 'posts:dislike' article.slug %}">
+                    {% csrf_token %}
+                    <button class="btn" type= "submit"><span class="icon fas fa-heart-broken"></span></button>
+                </form>
+                <span class="text">{{ article.dislikes.count }}</span>
+            </div>
+            <div class="contentBox">
+                <form method= "POST" action= "{% url 'posts:favourite' article.slug %}">
+                    {% csrf_token %}
+                    <button class="btn" type= "submit"><span class="icon  fas fa-bookmark"></span></button>
+                </form>
+                <span class="text">{{ article.favourites.count }}</span>
+            </div>
+            <div class="dots_contentBox">
+                <span class="dots_icon fas fa-ellipsis-h"></span>
+                <ul class="share hide">
+                    <li><span class="share_link">{% post_to_facebook "{{article.title}}" %}</span></li>
+                    <li><span class="share_link">{% post_to_twitter "{{article.title}}" %}</span></li>
+                    <li><span class="share_link">{% post_to_linkedin "{{article.title}}" %}</span></li>
+                </ul>
+            </div>
+        </aside>
+    </section>
+
+    <section class="right">
+      {% if related_posts %}
+        <section class="related-posts">
+            <div class="content">
+                <h2 class="heading">Related Posts</h2>
+                {% for related_post in related_posts %}
+                <div class="post">
+                    <div class="date">
+                        <h3 class="month">{{ related_post.created_at |date:'N' }}</h3>
+                        <h3 class="day">{{ related_post.created_at |date:'d' }}</h3>
+                    </div>
+                    <div class="post-title">
+                        <a href="{% url 'posts:post_detail' related_post.slug %}" class="title">{{ related_post.title }}</a>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </section>
+        {% endif %}
+
+        <div class="user-card">
+            <h2 class="heading">Author Info</h2>
+            <a href="#" class="img">
+              {% if article.author.profile.avatar %}
+              <img src="{{ article.author.profile.avatar.url }}" alt="Commentator">
+              {% else %}
+              <img src="{% static 'img/add-profile.jfif' %}" alt="Commentator">
+              {% endif %}
+            </a>
+            <div class="info">
+                {% if article.author.first_name and article.author.last_name %}
+                <a href="{% url 'user_profile' article.author.pk %}" class="username">{{ article.author.first_name }} {{ article.author.last_name }}</a>
+                {% else %}
+                <a href="{% url 'user_profile' article.author.pk %}" class="username">{{ article.author.username }}</a>
+                {% endif %}
+                {% if article.author.profile.job %}
+                <p class="job">{{ article.author.job }}</p>
+                {% endif %}
+                {% if article.author.profile.location %}
+                <p class="country">{{ article.author.profile.location }}</p>
+                {% endif %}
+            </div>
+        </div>
+    </section>
+</main>
+{% endblock %}

@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+<title>
+  {% block title %}
+      Create Tag
+  {% endblock %}
+</title>
+
+
+{% block content %}
+<section class="add-post">
+    <div class="contentBox">
+        <h2><i class="fas fa-plus-circle"></i>Add Tag</h2>
+        <div class="formBox">
+            <form method="POST">
+                {% csrf_token %}
+                <div class="inputBox">
+                    <label>Post Tag</label>
+                    {{form}}
+                </div>
+
+                <div class="inputBox">
+                    <button class="btn" type="submit" style="width:50%;">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+{% endblock %}

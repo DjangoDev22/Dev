@@ -1,0 +1,88 @@
+{% extends 'base_1.html' %}
+{% load static %}
+<title>
+  {% block title %}
+      Add Profile
+  {% endblock %}
+</title>
+
+
+
+{% block content %}
+<section class="add-profile">
+    <div class="contentBox">
+        <h2><i class="fas fa-user-plus"></i>Add Profile</h2>
+        <div class="imgBox">
+            <img src="{% static 'img/add-profile.jfif' %}" alt="User Image">
+        </div>
+        <div class="formBox">
+            <form method="POST" enctype="multipart/form-data">
+                <div class="fileBox">
+                    <label for="id_avatar" class="custom-file-upload">
+                        <span class="img-icon fas fa-pen"></span>
+                    </label>
+                    {{ p_form.avatar }}
+                    <!-- <input type="file" name="avatar" accept="image/*" id="id_avatar"> -->
+                </div>
+                <div class="group-inline">
+                    <div class="inputBox">
+                        <label>First name</label>
+                        {{ u_form.first_name }}
+                        <!-- <input class="first_name" type="text" placeholder="John"> -->
+                    </div>
+                    <div class="inputBox">
+                        <label>Last name</label>
+                        {{ u_form.last_name }}
+                        <!-- <input class="last_name" type="text" placeholder="Doe"> -->
+                    </div>
+                </div>
+                <div class="inputBox">
+                    <label>Username</label>
+                    {{ u_form.username }}
+                    <!-- <input class="input-field" type="text" placeholder="JohnDoe"> -->
+                </div>
+                <div class="inputBox">
+                    <label>Email</label>
+                    {{ u_form.email }}
+                    <!-- <input class="input-field" type="email" placeholder="johndoe@gmail.com"> -->
+                </div>
+                <div class="inputBox">
+                    <label>Bio</label>
+                    {{ p_form.bio }}
+                    <!-- <textarea class="bio" cols="30" rows="10" placeholder="Write Your Bio Here ..."></textarea> -->
+                </div>
+
+                <div class="inputBox">
+                    <label>Age</label>
+                    {{ p_form.age }}
+                    <!-- <input class="input-field" type="text" placeholder="21"> -->
+                </div>
+                <div class="inputBox">
+                    <label>Gender</label>
+                    {{ p_form.gender }}
+                    <!-- <input class="input-field" type="text" placeholder="male"> -->
+                </div>
+                <div class="dateBox">
+                    <label>Birth Date</label>
+                    {{ p_form.birthdate }}
+                    <!-- <input class="input-field" type="text" placeholder="12/05/2000"> -->
+                </div>
+                <div class="inputBox">
+                    <label>Country</label>
+                    {{ p_form.location }}
+                    <!-- <input class="input-field" type="text" placeholder="Egypt"> -->
+                </div>
+                <div class="inputBox">
+                    <label>Mobile</label>
+                    {{ p_form.mobile }}
+                    <!-- <input class="input-field" type="text" placeholder="+201555730223"> -->
+                </div>
+
+                <div class="inputBox">
+                    <button type="submit">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+{% endblock %}

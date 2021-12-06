@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load humanize %}
+
+<title>
+  {% block title %}
+      Latest Posts
+  {% endblock %}
+</title>
+
+
+{% block content %}
+<section class="post">
+    <div class="content">
+      {% for post in latest_posts %}
+        <div class="post-card">
+            <div class="img">
+                {% if post.author.profile.avatar %}
+                <img src="{{ post.author.profile.avatar.url }}" alt="User Image">
+                {% else %}
+                <img src="{% static 'img/add-profile.jfif' %}" alt="User Image">
+                {% endif %}
+            </div>
+            <div class="text">
+                <h3 class="date">{{ post.created_at |naturaltime }}</h3>
+                <h1 class="title">{{ post.title }}</h1>
+                <p class="body">
+                    {{ post.content |truncatechars:150 }}
+                </p>
+            </div>
+            <a href="{% url 'posts:post_detail' post.slug %}" class="btn">Read More</a>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,99 @@
+{% extends 'base_1.html' %}
+{% load static %}
+{% load humanize %}
+<title>
+  {% block title %}
+      User Profile
+  {% endblock %}
+</title>
+
+
+
+{% block content %}
+<section class="user-profile">
+    <div class="contentBox">
+        <h2><i class="fas fa-user"></i>User Profile</h2>
+        <div class="imgBox">
+            {% if user_profile.avatar %}
+            <img src="{{ user_profile.avatar.url }}" alt="User Image">
+            {% else %}
+            <img src="{% static 'img/add-profile.jfif' %}" alt="User Image">
+            {% endif %}
+            <h3>{{ user_profile.user.first_name }} {{ user_profile.user.last_name }}</h3>
+        </div>
+
+        <div class="about">
+            <h2><i class="fas fa-address-card"></i> About</h2>
+            <div class="container">
+                <p class="label">First Name: </p>
+                <p class="text">{{ user_profile.user.first_name }}</p>
+            </div>
+            <div class="container">
+                <p class="label">Last Name: </p>
+                <p class="text">{{ user_profile.user.last_name }}</p>
+            </div>
+            <div class="container">
+                <p class="label">Email: </p>
+                <p class="text">{{ user_profile.user.email }}</p>
+            </div>
+            <div class="container">
+                <p class="label">Bio: </p>
+                <p class="text">{{ user_profile.bio }}</p>
+            </div>
+            <div class="container">
+                <p class="label">Gender: </p>
+                <p class="text">{{ user_profile.gender }}</p>
+            </div>
+            <div class="container">
+                <p class="label">Birth Date: </p>
+                <p class="text">{{ user_profile.birthdate }}</p>
+            </div>
+            <div class="container">
+                <p class="label">Age: </p>
+                <p class="text">{{ user_profile.age }} Years Old</p>
+            </div>
+            <div class="container">
+                <p class="label">Country: </p>
+                <p class="text">{{ user_profile.location }}</p>
+            </div>
+            <div class="container">
+                <p class="label">Mobile: </p>
+                <p class="text">{{ user_profile.mobile }}</p>
+            </div>
+        </div>
+
+        <div class="user-posts">
+            <h2><i class="fas fa-newspaper"></i> Posts</h2>
+            {% for post in user_articles %}
+            <div class="card">
+                <div class="text">
+                    <h3 class="date">{{ post.created_at |naturaltime }}</h3>
+                    <h1 class="title">{{ post.title }}</h1>
+                    <p class="body">
+                    {{ post.content |truncatechars:150 }}
+                    </p>
+                </div>
+                <a href="{% url 'posts:post_detail' post.slug %}" class="btn">Read More</a>
+            </div>
+            {% endfor %}
+        </div>
+
+        <div class="user-posts">
+            <h2><i class="fas fa-newspaper"></i>Favourite Posts</h2>
+            {% for post in user_favourites %}
+            <div class="card">
+                <div class="text">
+                    <h3 class="date">{{ post.created_at |naturaltime }}</h3>
+                    <h1 class="title">{{ post.title }}</h1>
+                    <p class="body">
+                    {{ post.content |slice:"0:148" }}
+                    </p>
+                </div>
+                <a href="{% url 'posts:post_detail' post.slug %}" class="btn">Read More</a>
+            </div>
+            {% endfor %}
+        </div>
+
+    </div>
+</section>
+{% endblock %}

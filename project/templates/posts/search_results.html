@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load humanize %}
+<title>
+  {% block title %}
+      Search Results
+  {% endblock %}
+</title>
+
+
+{% block content %}
+<section class="post">
+    <div class="content">
+        {% for article in search_articles %}
+        <div class="post-card">
+            <div class="img">
+                {% if article.author.profile.avatar %}
+                <img src="{{ article.author.profile.avatar.url }}" alt="User Image">
+                {% else %}
+                <img src="{% static 'img/add-profile.jfif' %}" alt="User Image">
+                {% endif %}
+            </div>
+            <div class="text">
+                <h3 class="date">{{ article.created_at |naturaltime }}</h3>
+                <h1 class="title">{{ article.title }}</h1>
+                <p class="body">
+                    {{ article.content |truncatechars:150 }}
+                </p>
+            </div>
+            <a href="{% url 'posts:post_detail' article.pk %}" class="btn">Read More</a>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+{% endblock %}

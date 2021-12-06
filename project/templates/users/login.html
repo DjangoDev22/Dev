@@ -1,0 +1,46 @@
+{% extends 'base_1.html' %}
+{% load static %}
+{% load socialaccount %}
+<title>
+  {% block title %}
+      User Login
+  {% endblock %}
+</title>
+
+
+{% block content %}
+<section class="signin">
+    <div class="imgBox">
+        <img src="{% static 'img/register-1.jpg' %}" alt="Signin">
+    </div>
+    <div class="contentBox">
+        <div class="formBox">
+            <h2>Sign In</h2>
+            <form method="POST">
+                {% csrf_token %}
+                <div class="inputBox">
+                    {{ form.username }}
+                    <!-- <input class="email" type="email" placeholder="johndoe@gmail.com"> -->
+                </div>
+                <div class="inputBox">
+                    {{ form.password }}
+                    <!-- <input class="password" type="text" placeholder="password"> -->
+                </div>
+                <div class="inputBox">
+                    <button type="submit">Sign In</button>
+                </div>
+            </form>
+            <div class="other">
+                <span>Don't have an account?</span>
+                <a href="{% url 'user_signup' %}">sign up</a>
+            </div>
+            <div class="social-login">
+                <h3>Login With Social Media</h3>
+                <a href="#"><span class="icon face fab fa-facebook-f"></span></a>
+                <a href="#"><span class="icon git fab fa-github"></span></a>
+                <a href="{% provider_login_url 'google' %}"><span class="icon plus fab fa-google-plus-g"></span></a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

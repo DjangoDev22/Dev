@@ -1,0 +1,1249 @@
+/*                 Start General CSS Rules                       */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800;900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@200;300;400;500;600;700;800;900&display=swap');
+
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap");
+
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@200;300;400;500;600;700;800;900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #f6f6f6;
+}
+/*                 End General CSS Rules                         */
+
+/*                 Start Header CSS Rules                       */
+header{
+    height: 66px;
+    background-color: #202020;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 35px;
+}
+
+header .logo a{
+    text-decoration: none;
+}
+
+header .logo a p{
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #fff;
+    font-size: 30px;
+    font-weight: 700;
+    font-family: 'Montserrat Alternates', sans-serif;
+}
+
+header .nav_links{
+    display: flex;
+}
+
+header .nav_links li{
+    position: relative;
+    list-style-type: none;
+}
+
+header .nav_links li span,
+header .nav_links li a{
+    text-decoration: none;
+    display: inline-block;
+    margin-left: 30px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.icon{
+    cursor: pointer;
+}
+
+header .nav_links li .menu{
+    position: absolute;
+    top: 41px;
+    padding: 10px;
+    background-color: #161a1d;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    right: -35px;
+    width: 100%;
+    z-index: 1;
+}
+
+header .nav_links li .menu.hide{
+    display: none;
+}
+
+header .nav_links li .menu li a{
+    display: inline-block;
+    margin: 5px 0;
+    padding: 10px 0;
+    text-decoration: none;
+    text-align: center;
+    color: #fff;
+}
+/*                 End Header CSS Rules                         */
+
+/*                 Start Footer CSS Rules                         */
+footer{
+    background-color: #202020;
+    padding: 3rem 7rem 2rem 7rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+footer .follow-us{
+    display: flex;
+    flex-direction: column;
+}
+
+footer .follow-us h2{
+    color: #fffffc;
+    font-size: 2rem;
+    font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 1rem;
+}
+
+footer .follow-us .social{
+    margin-bottom: 3rem;
+}
+
+footer .follow-us .social a{
+    display: inline-block;
+    color: #f6f6f6;
+    text-decoration: none;
+    font-size: 20px;
+    background-color: #212529;
+    padding: 5px;
+    border-radius: 100%;
+    text-align: center;
+    transition: all 0.4s ease;
+}
+
+footer .follow-us .social a:hover{
+    color: #212529;
+    background-color: #f6f6f6;
+}
+
+footer .follow-us .social a .icon{
+    display: inline-block;
+    border-radius: 100%;
+    padding: 5px;
+}
+
+footer .follow-us .links{
+    display: flex;
+    flex-direction: column;
+}
+
+footer .follow-us .links a{
+    display: inline-block;
+    color: #f6f6f6;
+    text-decoration: none;
+    font-size: 16px;
+    font-family: 'Kanit', sans-serif;
+    font-weight: bolder;
+    margin-bottom: 10px;
+}
+
+footer .more-links{
+    display: flex;
+    flex-direction: column;
+}
+
+footer .more-links h2{
+    color: #fffffc;
+    font-size: 1.5rem;
+    font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 1.5rem;
+}
+
+footer .more-links .links{
+    display: flex;
+    flex-direction: column;
+}
+
+footer .more-links .links a{
+    display: inline-block;
+    color: #f6f6f6;
+    text-decoration: none;
+    margin-bottom: 15px;
+    font-size: 1rem;
+    font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+}
+
+footer .newsletter{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+footer .newsletter h2{
+    color: #fffffc;
+    font-size: 1.5rem;
+    font-weight: 500;
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 0.5rem;
+}
+
+footer .newsletter .form{
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+footer .newsletter .form form .subscribe{
+    position: relative;
+    width: 70%;
+    display: inline-block;
+    border: none;
+    outline: none;
+    padding: 0 10px;
+    height: 30px;
+    background-color: #ede0d4!important;
+    color: #555b6e;
+    font-family: 'Kanit', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+footer .newsletter .form form .btn{
+    position: relative;
+    width: 25%;
+    display: inline-block;
+    border: none;
+    outline: none;
+    height: 30px;
+    font-size: 14px;
+    font-weight: 500;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #979dac;
+    cursor: pointer;
+    left: -5px;
+    top: -1px;
+}
+
+footer .newsletter .more{
+    background-color: transparent;
+    position: absolute;
+    top: 45%;
+    left: -30%;
+    width: 170%;
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+footer .newsletter .more p{
+    color: #f6f6f6;
+    letter-spacing: 2px;
+    line-height: 1.3;
+}
+/*                 End Footer CSS Rules                           */
+
+/*                 Start Hero Section CSS Rules                           */
+.hero{
+    position: relative;
+    height: 100vh;
+    background-image: url("/static/img/hero.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.hero img{
+    width: 100%;
+    height: 100%;
+}
+
+.hero .info{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 25px;
+    text-align: center;
+}
+
+.hero .info .text{
+    margin-bottom: 30px;
+}
+
+.hero .info .text .l-one{
+    font-size: 4rem;
+    font-weight: 900;
+    font-family: 'Kanit', sans-serif;
+    text-transform: capitalize;
+    margin-bottom: 1rem;
+    color: #212529;
+}
+
+.hero .info .text .l-two{
+    font-size: 30px;
+    font-weight: 500;
+    font-family: 'Kanit', sans-serif;
+    text-transform: capitalize;
+    margin-bottom: 1rem;
+    color: #212529;
+}
+
+.hero .info .text .l-three{
+    font-size: 30px;
+    font-weight: 500;
+    font-family: 'Kanit', sans-serif;
+    text-transform: capitalize;
+    margin-bottom: 1rem;
+    color: #212529;
+}
+
+.hero .info .register a{
+    display: inline-block;
+    text-decoration: none;
+    background-color: #52b788;
+    color: #212529;
+    font-size: 18px;
+    font-weight: 400;
+    font-family: 'Kanit', sans-serif;
+    text-transform: capitalize;
+    padding: 8px 15px;
+    border-radius: 5px;
+    margin: 0 10px;
+}
+/*                 End Hero Section CSS Rules                             */
+
+/*                 Start Trending & Latest CSS Rules                             */
+.trending-posts{
+    padding: 40px 0;
+    margin-bottom: 30px;
+}
+
+.trending-posts .heading{
+    text-align: center;
+    margin: 10px auto;
+    padding: 10px 0;
+    color: #333;
+    font-size: 24px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+}
+
+.trending-posts .icon-prev{
+    color: #6fd3d7;
+    position: absolute;
+    left: 5%;
+    top: 50%;
+    font-size: 35px;
+    cursor: pointer;
+}
+
+.trending-posts .icon-next{
+    color: #6fd3d7;
+    position: absolute;
+    right: 5%;
+    top: 50%;
+    font-size: 35px;
+    cursor: pointer;
+}
+
+.trending-posts .content{
+    position: relative;
+    max-width: 90%;
+    max-height: 400px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+}
+
+.trending-posts .content .card{
+    max-width: 300px;
+    max-height: 400px;
+    background-color: #fff;
+    padding: 2rem 1rem 2rem 1rem;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+.trending-posts .content .card .text .date{
+    margin: 0 0 0.5rem 0;
+    color: #999;
+    font-size: 1rem;
+    font-family: 'Roboto', sans-serif;
+}
+
+.trending-posts .content .card .text .title{
+    margin: 0 0 1rem 0;
+    font-size: 20px;
+    letter-spacing: 0.5px;
+    color: #333;
+    font-family: 'Roboto', sans-serif;
+}
+
+.trending-posts .content .card .text .body{
+    margin: 0 0 3.5rem 0;
+    font-size: 22px;
+    color: #333;
+    font-family: 'Roboto', sans-serif;
+}
+
+.trending-posts .content .card .btn{
+    border: none;
+    outline: none;
+    background: linear-gradient(90deg, #ff9966, #ff5e62);
+    padding: 1rem 1rem;
+    border-radius: 50px;
+    color: white;
+    font-size: 18px;
+    box-shadow: 1px 10px 2rem rgba(255, 94, 98, 0.5);
+    transition: all .2s ease-in;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+}
+
+.trending-posts .content .card .btn:hover{
+    box-shadow: 0px 5px 1rem rgba(255, 94, 98, 0.5);
+}
+
+.trending-posts .load-more{
+    margin-top: 20px;
+    text-align: center;
+}
+
+.trending-posts .load-more .btn{
+    display: inline-block;
+    border: none;
+    outline: none;
+    background: linear-gradient(90deg, #ff9966, #ff5e62);
+    padding: 1rem 3rem;
+    border-radius: 50px;
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+}
+/*                 End Trending & Latest CSS Rules                               */
+
+/*                 Start Post Listings Section CSS Rules                               */
+.post{
+    position: relative;
+    margin-top: 50px;
+    margin-left: 100px;
+    margin-right: 100px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.post .post-card{
+    position: relative;
+    max-width: 650px;
+    background-color: #fff;
+    padding: 3rem 4rem 5rem 5rem;
+    border-radius: 10px;
+    box-shadow: 1px 1px 2rem rgba(0, 0, 0, 0.3);
+    margin-bottom: 50px;
+}
+
+.post .post-card .img{
+    height: 110px;
+    width: 110px;
+    border-radius: 100%;
+    background: linear-gradient(90deg, #ff9966, #ff5e62);
+    box-shadow: 1px 1px 2rem rgba(0, 0, 0, 0.3);
+    position: absolute;
+    left: -50px;
+    top: 10px;
+    transform: translateY(-50%);
+}
+
+.post .post-card .img img{
+    height: 100px;
+    width: 100px;
+    border-radius: 100%;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 1px 1px 2rem rgba(0, 0, 0, 0.3);
+}
+
+.post .post-card .text .date{
+    margin: 0 0 0.5rem 0;
+    color: #999;
+    font-size: 1.25rem;
+    font-family: 'Roboto', sans-serif;
+}
+
+.post .post-card .text .title{
+    margin: 0 0 1rem 0;
+    font-size: 2.5rem;
+    letter-spacing: 0.5px;
+    color: #333;
+    font-family: 'Roboto', sans-serif;
+}
+
+.post .post-card .text .body{
+    margin: 0 0 4.5rem 0;
+    font-size: 1.5rem;
+    color: #333;
+    font-family: 'Roboto', sans-serif;
+}
+
+.post .post-card .btn{
+    border: none;
+    outline: none;
+    background: linear-gradient(90deg, #ff9966, #ff5e62);
+    padding: 1.5rem 2rem;
+    border-radius: 50px;
+    color: white;
+    font-size: 1.2rem;
+    box-shadow: 1px 10px 2rem rgba(255, 94, 98, 0.5);
+    transition: all .2s ease-in;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+}
+
+.post .post-card .btn:hover{
+    box-shadow: 0px 5px 1rem rgba(255, 94, 98, 0.5);
+}
+
+/*                               Side Bar                                             */
+.post .side-bar{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 100px;
+}
+
+.post .side-bar .search{
+    background-color: #fffffc;
+    padding: 1rem 2rem;
+    margin-bottom: 2rem;
+    border-radius: 5px;
+    box-shadow: 1px 1px 2rem rgba(0, 0, 0, 0.3);
+}
+
+.post .side-bar .search form input{
+    padding: 10px 20px;
+    outline: none;
+    border: 1px solid #ced4da;
+    border-radius: 20px;
+}
+
+.post .side-bar .topics{
+    padding: 2rem;
+    background-color: #fffffc;
+    border-radius: 5px;
+    box-shadow: 1px 1px 2rem rgba(0, 0, 0, 0.3);
+}
+
+.post .side-bar .topics p{
+    margin-bottom: 10px;
+    text-transform: capitalize;
+    font-size: 30px;
+    font-weight: 700;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    color: #212529;
+}
+
+.post .side-bar .topics ul li{
+    list-style-type: none;
+}
+
+.post .side-bar .topics ul li a{
+    display: inline-block;
+    text-decoration: none;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #ced4da;
+    width: 90%;
+    padding: 8px;
+    font-size: 18px;
+    font-weight: 500;
+    font-family: 'Kanit', sans-serif;
+    color: #495057;
+}
+/*                 End Post Listings Section CSS Rules                                 */
+
+/*                 Start Post Details Section CSS Rules                                 */
+.post-details{
+    position: relative;
+    /* width: 80%; */
+    margin: 40px auto;
+    display: flex;
+    padding-left: 200px;
+    padding-right: 150px;
+}
+
+.post-details .left{
+    position: relative;
+    /* max-width: 65%; */
+    margin-right: 5%;
+}
+
+.post-details .detail{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.post-details .detail .post-title{
+    margin-bottom: 0.75rem;
+}
+
+.post-details .detail .post-title .title{
+    font-size: 3rem;
+    font-family: 'Kanit', sans-serif;
+}
+
+.post-details .detail .posted-at{
+    margin-bottom: 0.5rem;
+}
+
+.post-details .detail .posted-at .date{
+    color: #999;
+    font-size: 16px;
+    font-family: 'Kanit', sans-serif;
+    font-weight: 500;
+}
+
+.post-details .detail .posted-at .date .user{
+    display: inline-block;
+    text-decoration: none;
+    color: #999;
+}
+
+.post-details .detail .category{
+    margin-bottom: 0.5rem;
+}
+
+.post-details .detail .category a{
+    display: inline-block;
+    color: #fff;
+    text-decoration: none;
+    background-color: #0a65bf;
+    padding: 2px 5px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 14px;
+    font-family: 'Kanit', sans-serif;
+    font-weight: 500;
+}
+
+.post-details .detail .tags{
+    margin-bottom: 1rem;
+}
+
+.post-details .detail .tags a{
+    display: inline-block;
+    color: #fff;
+    text-decoration: none;
+    background-color: #495057;
+    padding: 2px 5px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-family: 'Kanit', sans-serif;
+    font-weight: 500;
+}
+
+.post-details .detail .img{
+    margin-bottom: 1.5rem;
+    width: 650px;
+    height: 300px;
+}
+
+.post-details .detail .img img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.post-details .detail .post-body .body{
+    font-size: 18px;
+    font-family: 'Kanit', sans-serif;
+    font-weight: 200;
+    letter-spacing: 1px;
+    line-height: 1.2;
+    width: 630px;
+}
+
+/*                           Comments Section                                 */
+.post-details .comments{
+    margin-top: 20px;
+    border: 1px solid #d3d3d3;
+    width: 650px;
+    background-color: #f5f3f4;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.post-details .comments .comment-form form .textarea{
+    max-width: 100%;
+    outline: none;
+    border: none;
+    border: 1px solid #333;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.post-details .comments .comment-form form .btn{
+    outline: none;
+    border: none;
+    background-color: salmon;
+    padding: 8px 20px;
+    border-radius: 2rem;
+    font-size: 16px;
+    color: #f1faee;
+    font-family: 'Kanit', sans-serif;
+    font-weight: 200;
+    letter-spacing: 1px;
+}
+
+.post-details .comments .comment-replies{
+    margin-top: 10px;
+}
+
+.post-details .comments .comment-replies .content{
+    margin-bottom: 10px;
+}
+
+.post-details .comments .comment-replies .commentator{
+    display: flex;
+}
+
+.post-details .comments .comment-replies .commentator .img{
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    margin-right: 10px;
+}
+
+.post-details .comments .comment-replies .commentator .img img{
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+}
+
+.post-details .comments .comment-replies .commentator a{
+    display: inline-block;
+    color: #212529;
+    text-decoration: none;
+    font-size: 18px;
+    font-family: 'Kanit', sans-serif;
+    font-weight: 500;
+    margin-top: 10px;
+}
+
+.post-details .comments .comment-replies .comment-body{
+    padding-left: 65px;
+}
+
+.post-details .comments .comment-replies .comment-body .body{
+    font-size: 18px;
+    font-family: 'Kanit', sans-serif;
+    font-weight: 200;
+}
+
+/*                    More Section                          */
+.more{
+    background-color: salmon;
+    position: absolute;
+    top: 13%;
+    left: -28%;
+    width: 12%;
+    /* height: 300px; */
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.more .contentBox{
+    margin-bottom: 35px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.more .dots_contentBox{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.more .dots_contentBox .share{
+    position: absolute;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #fff;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+    top: 10px;
+    left: 80px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.hide{
+    display: none;
+}
+
+.dots_icon{
+    display: inline-block;
+    filter: invert(1);
+    padding: 10px;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.more .dots_contentBox .share li{
+    list-style-type: none;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.more .dots_contentBox .share li:last-child{
+    margin-bottom: 0px;
+}
+
+.more .dots_contentBox .share li .share_link{
+    display: inline-block;
+    text-decoration: none;
+    color: #000;
+    font-size: 16px;
+    font-family: 'Kanit', sans-serif;
+    font-weight: 400;
+}
+
+.more .contentBox form .btn{
+    border: none;
+    outline: none;
+    background-color: transparent;
+}
+
+.more .contentBox .icon{
+    display: inline-block;
+    filter: invert(1);
+    padding: 10px;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.more .contentBox .text{
+    display: inline-block;
+    color: #fff;
+    font-size: 20px;
+}
+
+/*                           Related Posts Section                           */
+.post-details .right{
+    /* max-width: 35%; */
+}
+
+.post-details .right .related-posts{
+    background-color: #fff;
+    /* width: 100%; */
+    min-width: 300px;
+    max-width: 100%;
+    padding: 15px;
+    box-shadow: 1px 1px 1rem rgba(0, 0, 0, 0.3);
+}
+
+.post-details .right .related-posts .content .heading{
+    font-size: 1.5rem;
+    font-family: 'Kanit', sans-serif;
+    font-weight: 700;
+    color: #202020;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #b7b7a4;
+}
+
+.post-details .right .related-posts .content .post{
+    display: flex;
+    justify-content: flex-start;
+    margin: 0;
+    align-items: center;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #b7b7a4;
+}
+
+.post-details .right .related-posts .content .post .date .month{
+    background-color: #e63946;
+    text-align: center;
+    padding: 0 15px;
+    border-radius: 5px 5px 0 0;
+    color: #f1faee;
+    text-transform: capitalize;
+}
+
+.post-details .right .related-posts .content .post .date .day{
+    background-color: #f1faee;
+    text-align: center;
+    padding: 10px 15px;
+    border-radius: 0 0 5px 5px;
+    color: #1d3557;
+    font-family: 'Kanit', sans-serif;
+    font-weight: bolder;
+    letter-spacing: 2px;
+}
+
+.post-details .right .related-posts .content .post .post-title{
+    margin-left: 20px;
+}
+
+.post-details .right .related-posts .content .post .post-title .title{
+    display: inline-block;
+    text-decoration: none;
+    color: #333;
+    font-size: 1.1rem;
+    font-family: 'Kanit', sans-serif;
+    font-weight: 500;
+}
+
+/*                      Author Info Section                      */
+.post-details .right .user-card{
+    min-width: 240px;
+    max-width: 100%;
+    margin-left: 15%;
+    margin-top: 40px;
+    background-color: #fff;
+    box-shadow: 1px 1px 1rem rgba(0, 0, 0, 0.2);
+}
+
+.post-details .right .user-card .heading{
+    text-align: center;
+    font-size: 20px;
+    font-family: 'Kanit', sans-serif;
+    font-weight: bolder;
+    letter-spacing: 2px;
+    padding: 10px 0;
+    border-radius: 5px 5px 0 0;
+}
+
+.post-details .right .user-card .img{
+    display: inline-block;
+    padding: 0 10px;
+    width: 220px;
+    height: 150px;
+}
+
+.post-details .right .user-card .img img{
+    width: 220px;
+    height: 150px;
+
+}
+
+.post-details .right .user-card .info{
+    position: relative;
+    top: -3px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 0 0 5px 5px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+
+.post-details .right .user-card .info .username{
+    display: inline-block;
+    font-size: 18px;
+    font-family: 'Kanit', sans-serif;
+    font-weight: 600;
+    text-decoration: none;
+    color: #000;
+}
+
+.post-details .right .user-card .info .job{
+    color: #555b6e;
+    padding: 8px 0;
+    font-size: 16px;
+    font-family: 'Kanit', sans-serif;
+    font-weight: 400;
+}
+
+.post-details .right .user-card .info .country{
+    font-size: 16px;
+    font-family: 'Kanit', sans-serif;
+    font-weight: 400;
+
+}
+/*                 End Post Details Section CSS Rules                                   */
+
+/*                 Start Post Delete Section CSS Rules                                   */
+.delete-post{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+.delete-post .content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 40%;
+    width: 25%;
+    background-color: #fff;
+    padding: 30px;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3);
+}
+
+.delete-post .content .cancel .c-icon{
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    cursor: pointer;
+    color: #6c757d;
+}
+
+.delete-post .content .danger{
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.delete-post .content .danger .d-icon{
+    color: #e85d04;
+    font-size: 2rem;
+    border: 2px solid #e85d04;
+    padding: 15px 30px;
+    border-radius: 100%;
+}
+
+.delete-post .content .d-heading{
+    text-align: center;
+    font-size: 24px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    color: #858585;
+    margin-bottom: 25px;
+}
+
+.delete-post .content .formBox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.delete-post .content .formBox form .d-btn{
+    outline: none;
+    border: none;
+    font-size: 18px;
+    font-family: 'Montserrat';
+    font-weight: 600;
+    border: 1px solid #ef233c;
+    background-color: transparent;
+    padding: 10px;
+    background-color: #ef233c;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.delete-post .content .formBox form .c-btn{
+    outline: none;
+    border: none;
+    font-size: 18px;
+    font-family: 'Montserrat';
+    font-weight: 600;
+    border: 1px solid #adb5bd;
+    background-color: transparent;
+    padding: 10px;
+    background-color: #adb5bd;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 20px;
+}
+/*                 End Post Delete Section CSS Rules                                     */
+
+/*                 Start Add & Edit Post Section CSS Rules                               */
+.add-post,
+.edit-post
+{
+    position: relative;
+    background-color: #fff!important;
+    width: 100%;
+}
+
+.add-post .contentBox,
+.edit-post .contentBox
+{
+    position: relative;
+    width: 50%;
+    margin: 0 auto;
+    padding: 50px;
+}
+
+.add-post .contentBox h2,
+.edit-post .contentBox h2
+{
+    display: inline-block;
+    font-size: 24px;
+    font-family: 'Kanit', sans-serif;
+    font-weight: 600;
+    color: #607d86;
+    margin-bottom: 20px;
+}
+
+.add-post .contentBox h2 i,
+.edit-post .contentBox h2 i
+{
+    display: inline-block;
+    margin-right: 15px;
+}
+
+.add-post .contentBox .formBox,
+.edit-post .contentBox .formBox
+{
+    position: relative;
+    display: flex;
+}
+
+.add-post .contentBox .formBox .inputBox,
+.edit-post .contentBox .formBox .inputBox
+{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.add-post .contentBox .formBox .inputBox label,
+.edit-post .contentBox .formBox .inputBox label
+{
+    position: relative;
+    color: #607d86;
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    padding: 8px 8px;
+}
+
+.add-post .contentBox .formBox .inputBox .title,
+.add-post .contentBox .formBox .inputBox .category,
+.add-post .contentBox .formBox .inputBox .tag,
+.edit-post .contentBox .formBox .inputBox .title,
+.edit-post .contentBox .formBox .inputBox .category,
+.edit-post .contentBox .formBox .inputBox .tag
+
+{
+    position: relative;
+    outline: none;
+    border: none;
+    border: 1px solid #607d86;
+    border-radius: 50px;
+    padding: 10px 20px;
+    width: 100%;
+    background-color: transparent;
+    font-size: 16px;
+    font-family: 'Kanit', sans-serif;
+    font-weight: 300;
+    color: #607d86;
+}
+
+.add-post .contentBox .formBox .inputBox .body,
+.edit-post .contentBox .formBox .inputBox .body
+{
+    position: relative;
+    border: 1px solid #607d86;
+    border-radius: 10px;
+    outline: none;
+    width: 100%;
+    padding: 20px;
+    background-color: transparent;
+    font-size: 18px;
+    font-family: 'Kanit', sans-serif;
+    font-weight: 500;
+    color: #607d86;
+}
+
+.add-post .contentBox .formBox .inputBox button,
+.edit-post .contentBox .formBox .inputBox button
+{
+    position: relative;
+    outline: none;
+    border: none;
+    color: #fff;
+    background-color: #0077b6;
+    border: 1px solid #0077b6;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    text-align: center;
+    width: 35%;
+}
+
+.add-post .contentBox .formBox .inputBox button:hover,
+.edit-post .contentBox .formBox .inputBox button:hover
+{
+    background-color: #023e8a;
+}
+
+.add-post .contentBox .formBox .fileBox,
+.edit-post .contentBox .formBox .fileBox
+{
+    position: relative;
+    left: 35px;
+    margin: 20px 0;
+}
+
+.add-post .contentBox .formBox .fileBox span,
+.edit-post .contentBox .formBox .fileBox span
+{
+    display: inline-block;
+    left: -30px;
+    position: relative;
+}
+
+.add-post .contentBox .formBox .fileBox input,
+.edit-post .contentBox .formBox .fileBox input
+{
+    display: none;
+}
+
+.add-post .contentBox .formBox .fileBox .custom-file-upload,
+.edit-post .contentBox .formBox .fileBox .custom-file-upload
+{
+    position: relative;
+    display: inline-block;
+    width: 100px;
+    height: 30px;
+    text-align: center;
+    border-radius: 15px;
+}
+
+.add-post .contentBox .formBox .fileBox .img-icon,
+.edit-post .contentBox .formBox .fileBox .img-icon
+{
+    position: relative;
+    left: 0;
+    color: #fff;
+    background-color: #0077b6;
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    padding: 7px;
+    transform: scale(1.5);
+    cursor: pointer;
+    border-radius: 15px;
+    font-size: 14px;
+}
+/*                 End Add & Edit Post Section CSS Rules                                 */

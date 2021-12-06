@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
+      {% block title %}
+          Home Page
+      {% endblock %}
+    </title>
+    <!-- Fav Icon Link -->
+    <link rel="shortcut icon" type="image/png" href="{% static 'img/blogger.ico' %}"/>
+    <!-- normalize.css Library -->
+    <link rel="stylesheet" href="{% static 'css/normalize.css' %}">
+    <!-- Custom styles css -->
+    <link rel="stylesheet" href="{% static 'css/main_1.css' %}">
+    <!-- Responsive styles css -->
+    <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
+    <!-- Font Awesome Icons -->
+    <script src="https://kit.fontawesome.com/6a630c222c.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- Rest Of Page Here (The Changed Part) -->
+    {% block content %}
+
+    {% endblock %}
+
+    <script src="{% static 'js/custom.js' %}"></script>
+</body>
+</html>

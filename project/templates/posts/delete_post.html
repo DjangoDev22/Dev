@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+<title>
+  {% block title %}
+      Delete Post
+  {% endblock %}
+</title>
+
+
+{% block content %}
+<section class="delete-post">
+    <div class="content">
+        <div class="cancel">
+            <span class="c-icon fas fa-times"></span>
+        </div>
+        <div class="danger">
+            <span class="d-icon fas fa-exclamation"></span>
+        </div>
+        <h3 class="d-heading">Delete This Post ?</h3>
+        <div class="formBox">
+            <form method="POST">
+                {% csrf_token %}
+                <button class="d-btn" type="submit">Delete</button>
+                <button class="c-btn">Cancel</button>
+            </form>
+        </div>
+    </div>
+</section>
+{% endblock %}
